@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MAZ Academy · Programación, matemáticas e inglés</title>
+<meta name="description" content="MAZ Academy: clases de programación, matemáticas e inglés con María y Ana Zubieta.">
+<meta name="theme-color" content="#1b1740">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MAZ Academy">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+<header class="top">
+  <a class="brand" href="#top"><span class="logo">M</span>MAZ Academy</a>
+  <nav id="nav">
+    <a href="#about">La academia</a><a href="#team">Quiénes somos</a><a href="#courses">Qué enseñamos</a><a href="#projects">Proyectos</a><a href="#contact">Agendar llamada</a>
+  </nav>
+  <button id="auth" class="btn small">Entrar con Google</button>
+  <button id="burger" aria-label="Abrir menú">☰</button>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>Aprende a programar, resolver y hablar con confianza.</h1>
+    <p>Clases personalizadas de programación, matemáticas e inglés, con María y Ana Zubieta.</p>
+    <p class="row"><a class="btn" href="#contact">Agendar una llamada</a><a class="btn ghost" href="#courses">Ver qué enseñamos</a></p>
+  </div>
+  <pre class="code" aria-hidden="true"><span class="c">// Python</span>
+print("Hola, MAZ")
+
+<span class="c">// Matemáticas</span>
+2x + 3 = 11  →  x = 4
+
+<span class="c">// Inglés</span>
+I learn → I learned</pre>
+</section>
+
+<section id="about" class="sec">
+  <h2>Qué es MAZ Academy</h2>
+  <p>MAZ Academy es una academia online donde aprendes paso a paso, a tu ritmo y con proyectos reales. Las clases son cercanas, prácticas y adaptadas a tu nivel, tanto si empiezas de cero como si quieres reforzar lo que ya sabes.</p>
+</section>
+
+<section id="team" class="sec">
+  <h2>Quiénes somos</h2>
+  <div class="grid two">
+    <article class="card person"><span class="avatar">MZ</span><h3>María Zubieta</h3><p>Cofundadora y docente. Escribe aquí su formación, su experiencia y lo que más disfruta enseñando.</p></article>
+    <article class="card person"><span class="avatar a2">AZ</span><h3>Ana Zubieta</h3><p>Cofundadora y docente. Escribe aquí su formación, su experiencia y lo que más disfruta enseñando.</p></article>
+  </div>
+</section>
+
+<section id="courses" class="sec">
+  <h2>Qué enseñamos</h2>
+  <h3>Lenguajes de programación</h3>
+  <p class="chips"><b>Python</b><b>JavaScript</b><b>HTML y CSS</b><b>Java</b><b>SQL</b><b>C++</b><b>Scratch</b></p>
+  <h3>Herramientas</h3>
+  <p class="chips"><b>Git y GitHub</b><b>VS Code</b><b>React</b><b>Node.js</b><b>Bases de datos</b><b>Excel</b></p>
+  <h3>Asignaturas extra</h3>
+  <div class="grid two">
+    <article class="card"><h3>Matemáticas</h3><p>Refuerzo de álgebra, funciones, geometría y lógica, con ejercicios guiados.</p></article>
+    <article class="card"><h3>Inglés</h3><p>Conversación, gramática y vocabulario, también para programar y trabajar en inglés.</p></article>
+  </div>
+</section>
+
+<section id="projects" class="sec">
+  <h2>Proyectos y material</h2>
+  <p>Vídeos de proyectos que hemos hecho, PDFs y recursos para tus clases.</p>
+  <form id="upForm" class="card form" hidden>
+    <h3>Subir contenido (solo administradoras)</h3>
+    <label>Título<input name="title" required maxlength="120"></label>
+    <label>Descripción<textarea name="description" rows="2" maxlength="400"></textarea></label>
+    <label>Archivo (vídeo, PDF u otro, máx. 50 MB)<input type="file" name="file"></label>
+    <label>…o enlace (por ejemplo, un vídeo de YouTube)<input type="url" name="link" placeholder="https://"></label>
+    <button class="btn">Publicar</button>
+  </form>
+  <div id="grid" class="grid items"></div>
+</section>
+
+<section id="contact" class="sec">
+  <h2>Agenda una llamada</h2>
+  <p>Cuéntanos qué necesitas y te llamamos.</p>
+  <div id="gate" class="card"><p>Para agendar la llamada, entra primero con tu cuenta de Google.</p><button id="gateBtn" class="btn">Entrar con Google</button></div>
+  <form id="apptForm" class="card form" hidden>
+    <label>Nombre<input id="name" name="name" required maxlength="80" autocomplete="name"></label>
+    <label>Teléfono<input name="phone" type="tel" required maxlength="25" autocomplete="tel" inputmode="tel" placeholder="+34 600 000 000"></label>
+    <label>Motivo de la llamada<textarea name="reason" required rows="3" maxlength="500" placeholder="Por ejemplo: clases de Python para mi hijo de 14 años"></textarea></label>
+    <button class="btn">Solicitar llamada</button>
+  </form>
+</section>
+</main>
+
+<footer><p>© MAZ Academy · María y Ana Zubieta</p></footer>
+<div id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
